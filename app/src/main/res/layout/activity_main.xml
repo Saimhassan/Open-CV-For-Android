@@ -8,10 +8,51 @@
     tools:context=".MainActivity">
 
   <org.opencv.android.JavaCameraView
+      android:layout_centerHorizontal="true"
+      android:layout_alignParentTop="true"
       android:id="@+id/my_camera_view"
-      android:layout_width="fill_parent"
-      android:layout_height="fill_parent"/>
+      android:visibility="visible"
+      android:layout_width="300dp"
+      android:layout_height="300dp"/>
 
+  <LinearLayout
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      android:layout_below="@id/my_camera_view"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:padding="8dp"
+      android:layout_height="wrap_content">
+
+    <RatingBar
+        android:numStars = "5"
+        android:id="@+id/rating_bar"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      <EditText
+          android:layout_width="match_parent"
+          android:layout_height="200dp"
+          android:maxLines="100"
+          android:hint="Please write something"
+          android:id="@+id/edt_comment"/>
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+  </LinearLayout>
+
+  <Button
+      android:layout_centerHorizontal="true"
+      android:layout_alignParentBottom="true"
+      android:id="@+id/button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Button" />
 
 
 </RelativeLayout>
